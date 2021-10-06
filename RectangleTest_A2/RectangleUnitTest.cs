@@ -105,8 +105,8 @@ namespace RectangleTest_A2
             Assert.AreEqual(1, w);
         }
 
-        [TestMethod] // case to test setting negative Height
-        public void TestparameterizedConstructor_setNegetiveHeight()
+        [TestMethod] // case to test setting negative Length
+        public void TestparameterizedConstructor_setNegativeLength()
         {
             Rectangle rTest = new Rectangle(10, -5);
 
@@ -116,5 +116,30 @@ namespace RectangleTest_A2
             Assert.AreEqual(1, h);
             Assert.AreEqual(10, w);
         }
+
+        [TestMethod] // case to test overwritting the width
+        public void TestReactangle_overwriteWidth()
+        {
+            Rectangle rTest = new Rectangle();
+            // Old Value
+            rTest.Width = 5;
+            // New Value
+            rTest.Width = 50;
+
+            Assert.AreEqual(50, rTest.Width);
+        }
+
+        [TestMethod] // case to test overwritting the Length
+        public void TestReactangle_overwriteLength()
+        {
+            Rectangle rTest = new Rectangle();
+            // Old Value
+            rTest.Length = 5;
+            // New Value
+            rTest.Length = 50;
+
+            Assert.AreEqual(50, rTest.Length);
+        }
+
     }
 }
