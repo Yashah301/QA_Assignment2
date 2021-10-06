@@ -7,20 +7,21 @@ namespace RectangleTest_A2
     [TestClass]
     public class RectangleUnitTest
     {
-        [TestMethod]
-        public void TestDefaultConstructor_defaultValue()
+        [TestMethod] // Case to test default constructor 
+        public void TestDefaultConstructor_defaultValue() 
         {
+            // Rectangle obj
             Rectangle rTest = new Rectangle();
 
             int h = rTest.Length;
             int w = rTest.Width;
 
-
+            // asserting
             Assert.AreEqual(1, h);
             Assert.AreEqual(1, w);
         }
 
-        [TestMethod]
+        [TestMethod] // Case to test non-default constructor 
         public void TestparameterizedConstructor_setGivenValue()
         {
             Rectangle rTest = new Rectangle(5,10);
@@ -32,7 +33,7 @@ namespace RectangleTest_A2
             Assert.AreEqual(10, h);
             Assert.AreEqual(5, w);
         }
-        [TestMethod]
+        [TestMethod] // Case to test Reactangle Area with Default constructor 
         public void TestRectangleArea_withDefaultConstructor()
         {
             Rectangle rTest = new Rectangle();
@@ -42,7 +43,7 @@ namespace RectangleTest_A2
             Assert.AreEqual(1, rArea);
         }
 
-        [TestMethod]
+        [TestMethod] // Case to test Reactangle Area with non-Default constructor 
         public void TestRectangleArea_withParameterizedConstructor()
         {
             Rectangle rTest = new Rectangle(5, 5);
@@ -52,7 +53,7 @@ namespace RectangleTest_A2
             Assert.AreEqual(25, rArea);
         }
 
-        [TestMethod]
+        [TestMethod] // Case to test Reactangle Perimeter with Default constructor 
         public void TestRectanglePerimeter_withDefaultConstructor()
         {
             Rectangle rTest = new Rectangle();
@@ -62,7 +63,7 @@ namespace RectangleTest_A2
             Assert.AreEqual(4, rPerimeter);
         }
 
-        [TestMethod]
+        [TestMethod] // Case to test Reactangle Perimeter with non-Default constructor 
         public void TestRectanglePerimeter_withParameterizedConstructor()
         {
             Rectangle rTest = new Rectangle(5, 5);
@@ -72,7 +73,7 @@ namespace RectangleTest_A2
             Assert.AreEqual(20, rPerimeter);
         }
 
-        [TestMethod]
+        [TestMethod] // case to test getting rectangle length
         public void TestRectangle_getLength()
         {
             Rectangle rTest = new Rectangle(100,20);
@@ -82,7 +83,7 @@ namespace RectangleTest_A2
             Assert.AreEqual(20, l);
         }
 
-        [TestMethod]
+        [TestMethod] // case to test getting rectangle width
         public void TestRectangle_getWidth()
         {
             Rectangle rTest = new Rectangle(100, 20);
@@ -92,8 +93,8 @@ namespace RectangleTest_A2
             Assert.AreEqual(100, w);
         }
 
-        [TestMethod]
-        public void TestparameterizedConstructor_setNegetiveWidth()
+        [TestMethod] // case to test setting negative width
+        public void TestparameterizedConstructor_setNegativeWidth()
         {
             Rectangle rTest = new Rectangle(-5, 5);
 
@@ -104,7 +105,7 @@ namespace RectangleTest_A2
             Assert.AreEqual(1, w);
         }
 
-        [TestMethod]
+        [TestMethod] // case to test setting negative Height
         public void TestparameterizedConstructor_setNegetiveHeight()
         {
             Rectangle rTest = new Rectangle(10, -5);
