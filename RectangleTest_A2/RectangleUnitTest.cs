@@ -8,7 +8,7 @@ namespace RectangleTest_A2
     public class RectangleUnitTest
     {
         [TestMethod] // Case to test default constructor 
-        public void TestDefaultConstructor_defaultValue() 
+        public void DefaultConstructor_defaultValues_EqualsOne() 
         {
             // Rectangle obj
             Rectangle rTest = new Rectangle();
@@ -22,7 +22,7 @@ namespace RectangleTest_A2
         }
 
         [TestMethod] // Case to test non-default constructor 
-        public void TestparameterizedConstructor_setGivenValue()
+        public void ParameterizedConstructor_setGivenValue_EqualsGivenValue()
         {
             Rectangle rTest = new Rectangle(5,10);
 
@@ -34,7 +34,7 @@ namespace RectangleTest_A2
             Assert.AreEqual(5, w);
         }
         [TestMethod] // Case to test Reactangle Area with Default constructor 
-        public void TestRectangleArea_withDefaultConstructor()
+        public void RectangleArea_CalculateArea_withDefaultConstructor()
         {
             Rectangle rTest = new Rectangle();
 
@@ -44,7 +44,7 @@ namespace RectangleTest_A2
         }
 
         [TestMethod] // Case to test Reactangle Area with non-Default constructor 
-        public void TestRectangleArea_withParameterizedConstructor()
+        public void RectangleArea_CalculateArea_withParameterizedConstructor()
         {
             Rectangle rTest = new Rectangle(5, 5);
 
@@ -54,7 +54,7 @@ namespace RectangleTest_A2
         }
 
         [TestMethod] // Case to test Reactangle Perimeter with Default constructor 
-        public void TestRectanglePerimeter_withDefaultConstructor()
+        public void RectanglePerimeter_CalculatePerimeter_withDefaultConstructor()
         {
             Rectangle rTest = new Rectangle();
 
@@ -64,7 +64,7 @@ namespace RectangleTest_A2
         }
 
         [TestMethod] // Case to test Reactangle Perimeter with non-Default constructor 
-        public void TestRectanglePerimeter_withParameterizedConstructor()
+        public void RectanglePerimeter_CalculatePerimeter_withParameterizedConstructor()
         {
             Rectangle rTest = new Rectangle(5, 5);
 
@@ -74,7 +74,7 @@ namespace RectangleTest_A2
         }
 
         [TestMethod] // case to test getting rectangle length
-        public void TestRectangle_getLength()
+        public void Rectangle_GetLength_ReturnsRectangleLenght()
         {
             Rectangle rTest = new Rectangle(100,20);
 
@@ -84,7 +84,7 @@ namespace RectangleTest_A2
         }
 
         [TestMethod] // case to test getting rectangle width
-        public void TestRectangle_getWidth()
+        public void TestRectangle_GetWidth_ReturnsRectangleWidth()
         {
             Rectangle rTest = new Rectangle(100, 20);
 
@@ -94,7 +94,7 @@ namespace RectangleTest_A2
         }
 
         [TestMethod] // case to test setting negative width
-        public void TestparameterizedConstructor_setNegativeWidth()
+        public void ParameterizedConstructor_setvalueToOne_IfNegativeWidthValue()
         {
             Rectangle rTest = new Rectangle(-5, 5);
 
@@ -106,7 +106,7 @@ namespace RectangleTest_A2
         }
 
         [TestMethod] // case to test setting negative Length
-        public void TestparameterizedConstructor_setNegativeLength()
+        public void ParameterizedConstructor_setvalueToOne_IfNegativeLengthValue()
         {
             Rectangle rTest = new Rectangle(10, -5);
 
@@ -118,7 +118,7 @@ namespace RectangleTest_A2
         }
 
         [TestMethod] // case to test overwritting the width
-        public void TestReactangle_overwriteWidth()
+        public void Reactangle_overwriteWidth_newWidth()
         {
             Rectangle rTest = new Rectangle();
             // Old Value
@@ -130,7 +130,7 @@ namespace RectangleTest_A2
         }
 
         [TestMethod] // case to test overwritting the Length
-        public void TestReactangle_overwriteLength()
+        public void TestReactangle_overwriteLength_newLength()
         {
             Rectangle rTest = new Rectangle();
             // Old Value

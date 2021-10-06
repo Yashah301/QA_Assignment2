@@ -16,10 +16,10 @@ namespace QA_Assignment2
             this.width = 1;
             this.length = 1;
         }
-        public Rectangle(int width, int height)
+        public Rectangle(int width, int lenght)
         {
-            this.width = width>0?width:1;
-            this.length = height>0?height:1;
+            this.width = width > 0? width : 1; // This condition will not let user set negative/zero width.
+            this.length = lenght > 0? lenght : 1;  // This condition will not let user set negative/zero Length.
         }
         // Getter and Setter
         public int Width { get => width; set => width = value; }
