@@ -141,5 +141,26 @@ namespace RectangleTest_A2
             Assert.AreEqual(50, rTest.Length);
         }
 
+        [TestMethod] // case to test expection in Perimeter
+        [ExpectedException(typeof(Exception), "Error Occur")]
+        public void TestPerimeter_ThrowsExcetion_NegativeValue()
+        {
+            Rectangle rTest = new Rectangle();
+            rTest.Width = -100;
+            rTest.Length = 5;
+
+            rTest.getPerimeter();
+        }
+        [TestMethod] // case to test expection in Area
+        [ExpectedException(typeof(Exception), "Error Occur")]
+        public void TestArea_ThrowsExcetion_NegativeValue()
+        {
+            Rectangle rTest = new Rectangle();
+            rTest.Width = 10;
+            rTest.Length = -50;
+
+            rTest.getArea();
+        }
+
     }
 }
